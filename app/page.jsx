@@ -1,5 +1,5 @@
 import Feed from '@components/Feed'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 const page = () => {
   return (
@@ -10,7 +10,9 @@ const page = () => {
 
         <p className='desc text-center'>Promotopia is an open source AI prompting tool for modern world to discover, create and share creative prompts</p>
 
-        <Feed />
+        <Suspense>
+          <Feed />
+        </Suspense>
     </section>
   )
 }
